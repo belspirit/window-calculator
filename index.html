@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Okna calculator</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- custom styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery CDN -->
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"-->
+            <!--integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"-->
+            <!--crossorigin="anonymous"></script>-->
+
+
+</head>
+<body>
+
+<div class="calculator-wrapper">
+    <div class="container">
+        <!--<h1>Calculator</h1>-->
+
+        <div class="calculator">
+
+            <ul class="outer-tabs">
+                <li class="tab-active outer-tabs-item" data-tab-name="window">
+                    <div>Окна</div>
+                </li>
+                <li class="outer-tabs-item" data-tab-name="loggia">
+                    <div>Балкон и лоджия</div>
+                </li>
+                <li class="outer-tabs-item" data-tab-name="entrance">
+                    <div>Выход на балкон</div>
+                </li>
+            </ul>
+
+            <div class="tab-content outer-tab-content">
+                <!--Window-->
+                <div class="window tab active">
+                    <form>
+                        <div class="calc-form-top">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="calc-form-img">
+                                        <img id="w1" class="window-image" src="./img/big/window_1-1_.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="calc-top-info">
+
+                                        <!-- window types. Primary-->
+                                        <div class="radio-sp-type okno-tab-content">
+                                            <div class="radio-type">
+                                                <label class="invisible-input radio-type-label nav-tab-label activated">
+                                                    <input type="radio" value="Одностворчатое окно" okno-type="1"
+                                                           name="radio-type"
+                                                           checked="checked">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_1.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Одностворчатое окно</span>
+                                                </label>
+                                                <label class="invisible-input nav-tab-label radio-type-label">
+                                                    <input type="radio" value="Двухстворчатое окно" okno-type="2"
+                                                           name="radio-type">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_2.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Двухстворчатое окн</span>
+                                                </label>
+                                                <label class="invisible-input nav-tab-label radio-type-label">
+                                                    <input type="radio" value="Трехстворчатое окно" okno-type="3"
+                                                           name="radio-type">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_3.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Трехстворчатое окно</span>
+                                                </label>
+                                            </div>
+                                        </div> <!-- // .okno-tab-content-->
+
+                                        <!-- window type 1. Secondary-->
+                                        <div class="radio-sp-type okno-tab-content1 tab-secondary-content is-active">
+                                            <h4>Тип открывания</h4>
+                                            <div class="radio-type">
+                                                <label class="invisible-input radio-label-sec radio-type-label activated"
+                                                       okno-otkr="1-1">
+                                                    <input type="radio" value="Глухое одностворчатое окно"
+                                                           name="radio-type2"
+                                                           checked="checked">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_1.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Глухое окно</span>
+                                                </label>
+                                                <label class="invisible-input radio-label-sec radio-type-label"
+                                                       okno-otkr="1-2">
+                                                    <input type="radio" value="Одностворчатое окно с открыванием"
+                                                           name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_1_3.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Окно с открыванием</span>
+                                                </label>
+                                            </div>
+                                        </div> <!-- // .okno-tab-content1-->
+
+                                        <!-- window type 2. Secondary-->
+                                        <div class="radio-sp-type okno-tab-content2 tab-secondary-content">
+                                            <h4>Тип открывания</h4>
+                                            <div class="radio-type">
+                                                <label class="invisible-input radio-label-sec radio-type-label activated"
+                                                       okno-otkr="2-1">
+                                                    <input type="radio" value="Двухстворчатое окно с одним открыванием"
+                                                           name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_2_1.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Окно с одним открыванием</span>
+                                                </label>
+                                                <label class="invisible-input radio-label-sec radio-type-label"
+                                                       okno-otkr="2-2">
+                                                    <input type="radio" value="Двухстворчатое окно с двумя открываниями"
+                                                           name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_2_2.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Окно с двумя открываниями</span>
+                                                </label>
+                                            </div>
+                                        </div> <!-- // .okno-tab-content2-->
+
+                                        <!-- window type 3. Secondary-->
+                                        <div class="radio-sp-type okno-tab-content3 tab-secondary-content">
+                                            <h4>Тип открывания</h4>
+                                            <div class="radio-type">
+                                                <label class="invisible-input radio-label-sec radio-type-label activated"
+                                                       okno-otkr="3-1">
+                                                    <input type="radio" value="Трехстворчатое окно с одним открыванием"
+                                                           name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_3_1.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Окно с одним открыванием</span>
+                                                </label>
+                                                <label class="invisible-input radio-label-sec radio-type-label"
+                                                       okno-otkr="3-2">
+                                                    <input type="radio" value="Трехстворчатое окно с двумя открываниями"
+                                                           name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_3_2.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Окно с двумя открываниями</span>
+                                                </label>
+                                                <label class="invisible-input radio-label-sec radio-type-label"
+                                                       okno-otkr="3-3">
+                                                    <input type="radio" value="Трехстворчатое окно с тремя открываниями"
+                                                           name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_3_3.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Окно с тремя открываниями</span>
+                                                </label>
+                                            </div>
+                                        </div> <!-- // .okno-tab-content3-->
+
+                                    </div> <!-- // .calc-top-info-->
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="calc-dimensions calc-horizontal">
+                                        <div class="dimensions-item horizontal-item">
+                                            <div>Ширина</div>
+                                            <input type="number" name="width" value="">
+                                        </div>
+                                        <div class="dimensions-item horizontal-item">
+                                            <div>Высота</div>
+                                            <input type="number" name="height" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- // .calc-form-top-->
+
+                        <div class="calc-form-bottom">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="calc-block form-group">
+                                        <h4 class="calc-block-title">Производитель</h4>
+                                        <div class="calc-radio-list calc-radio-twin-list">
+
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Lider"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Lider</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Aluplast Ideal 2000">
+                                                <span class="radio-list-item-label">Aluplast Ideal 2000</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Brokelman 4">
+                                                <span class="radio-list-item-label">Brokelman 4</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Aluplast Ideal 4000">
+                                                <span class="radio-list-item-label">Aluplast Ideal 4000</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Vigrand 3">
+                                                <span class="radio-list-item-label">Vigrand 3</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Rehau E-60">
+                                                <span class="radio-list-item-label">Rehau E-60</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Vigrand 4">
+                                                <span class="radio-list-item-label">Vigrand 4</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Rehau E-70">
+                                                <span class="radio-list-item-label">Rehau E-70</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Vigrand 6">
+                                                <span class="radio-list-item-label">Vigrand 6</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Rehau SYNEGO">
+                                                <span class="radio-list-item-label">Rehau SYNEGO</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Vigrand 7">
+                                                <span class="radio-list-item-label">Vigrand 7</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Rehau GENEO">
+                                                <span class="radio-list-item-label">Rehau GENEO</span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-package calc-block form-group">
+                                        <h4 class="calc-block-title">Стеклопакет</h4>
+                                        <div class="calc-radio-list">
+
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package" value="1-камерный"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">1-камерный</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package" value="1-камерный с энерго">
+                                                <span class="radio-list-item-label">1-камерный с энерго</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package" value="2-камерный">
+                                                <span class="radio-list-item-label">2-камерный</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package" value="2-камерный с энерго">
+                                                <span class="radio-list-item-label">2-камерный с энерго</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package"
+                                                       value="2-камерный мультифункциональный">
+                                                <span class="radio-list-item-label">2-камерный мультифункциональный</span>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-furniture calc-block form-group">
+                                        <h4 class="calc-block-title">Фурнитура</h4>
+                                        <div class="calc-radio-list">
+
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-furniture" value="Winkhaus"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Winkhaus</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-furniture" value="Maco">
+                                                <span class="radio-list-item-label">Maco</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-furniture" value="Roto">
+                                                <span class="radio-list-item-label">Roto</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-furniture" value="Vorne">
+                                                <span class="radio-list-item-label">Vorne</span>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="add-info-toggler" id="addInfoToggler">+ Дополнительно</p>
+
+                            <div id="addInfoContent1" class="add-info-content row" style="display:none">
+                                <div class="col-sm-3">
+                                    <div class="calc-block">
+                                        <h4 class="calc-block-title">Подоконники</h4>
+                                        <div class="calc-radio-list">
+
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Без подоконника"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Без подоконника</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Plastolit">
+                                                <span class="radio-list-item-label">Plastolit</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Openteck">
+                                                <span class="radio-list-item-label">Openteck</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Danke">
+                                                <span class="radio-list-item-label">Danke</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Werzalit">
+                                                <span class="radio-list-item-label">Werzalit</span>
+                                            </label>
+
+                                        </div>
+
+                                    </div> <!-- // .calc-block-->
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-block">
+                                        <h4 class="calc-block-title">Отливы</h4>
+                                        <div class="calc-radio-list">
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-ebb" value="Без отлива"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Без отлива</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-ebb" value="Оцинкованные">
+                                                <span class="radio-list-item-label">Оцинкованные</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-ebb" value="Белые">
+                                                <span class="radio-list-item-label">Белые</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-ebb" value="Коричневые">
+                                                <span class="radio-list-item-label">Коричневые</span>
+                                            </label>
+                                        </div>
+                                    </div> <!-- // .calc-block-->
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-block">
+                                        <h4 class="calc-block-title">Откосы</h4>
+                                        <div class="calc-radio-list">
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-slope" value="Без откосов"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Без откосов</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-slope" value="Гипсокартонные">
+                                                <span class="radio-list-item-label">Гипсокартонные</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-slope" value="Пластиковые">
+                                                <span class="radio-list-item-label">Пластиковые</span>
+                                            </label>
+                                        </div>
+                                    </div> <!-- // .calc-block-->
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-block">
+                                        <h4 class="calc-block-title">Монтаж</h4>
+                                        <div class="calc-radio-list">
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-montage" value="Без монтажа"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Без монтажа</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-montage" value="Установка">
+                                                <span class="radio-list-item-label">Установка</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-montage" value="Евромонтаж">
+                                                <span class="radio-list-item-label">Евромонтаж</span>
+                                            </label>
+                                        </div>
+                                    </div> <!-- // .calc-block-->
+                                </div>
+                            </div>
+
+                            <h4>Контакты</h4>
+                            <div class="calc-contacts calc-horizontal">
+                                <div class="contacts-item horizontal-item form-group">
+                                    <p>Для более точной оценки стоимости окон оставьте свои контактные данные и мы вам
+                                        перезвоним</p>
+                                </div>
+                                <div class="contacts-item horizontal-item form-group">
+                                    <input type="text" name="name" value="" placeholder="Ваше имя">
+                                </div>
+                                <div class="contacts-item horizontal-item form-group">
+                                    <input type="tel" name="phone" value="" placeholder="Ваш номер телефона">
+                                </div>
+                            </div>
+                            <div class="calc-horizontal form-group">
+                                <button type="submit">Оформить заказ</button>
+                            </div>
+
+                        </div><!-- // .calc-form-bottom-->
+                    </form>
+                </div>
+                <!--Loggia and Balcony-->
+                <div class="loggia tab">
+                    <form>
+                        <div class="calc-form-top">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="calc-form-img">
+                                        <img id="w2" class="window-image" src="./img/big/loggia_1-1_.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="calc-top-info">
+
+                                        <!-- Loggia and Balcony types. Primary-->
+                                        <div class="radio-sp-type okno-tab-content">
+                                            <div class="radio-type">
+                                                <label class="invisible-input radio-type-label nav-tab-label activated">
+                                                    <input type="radio" value="Лоджия" name="radio-type" okno-type="1"
+                                                           checked="checked">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_4.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Лоджия</span>
+                                                </label>
+                                                <label class="invisible-input nav-tab-label radio-type-label">
+                                                    <input type="radio" value="Г-образный балкон" okno-type="2"
+                                                           name="radio-type">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_g.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Г-образный балкон</span>
+                                                </label>
+                                                <label class="invisible-input nav-tab-label radio-type-label">
+                                                    <input type="radio" value="П-образный балкон" okno-type="3"
+                                                           name="radio-type">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_p.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">П-образный балкон</span>
+                                                </label>
+                                            </div>
+                                        </div> <!-- // .okno-tab-content-->
+
+                                        <!-- Loggia and Balcony type 1. Secondary-->
+                                        <div class="radio-sp-type okno-tab-content1 tab-secondary-content is-active">
+                                            <h4>Тип открывания</h4>
+                                            <div class="radio-type">
+                                                <label class="invisible-input radio-label-sec radio-type-label activated"
+                                                       okno-otkr="1-1">
+                                                    <input type="radio" value="Лоджия" name="radio-type2"
+                                                           checked="checked">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_4_1.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Лоджия</span>
+                                                </label>
+                                            </div>
+                                        </div> <!-- // .okno-tab-content1-->
+
+                                        <!-- Loggia and Balcony type 2. Secondary-->
+                                        <div class="radio-sp-type okno-tab-content2 tab-secondary-content">
+                                            <h4>Тип открывания</h4>
+                                            <div class="radio-type">
+                                                <label class="invisible-input radio-label-sec radio-type-label activated"
+                                                       okno-otkr="2-1">
+                                                    <input type="radio" value="Балкон с глухой боковой створкой"
+                                                           name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_g_1.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Балкон с глухой боковой створкой</span>
+                                                </label>
+                                                <label class="invisible-input radio-label-sec radio-type-label"
+                                                       okno-otkr="2-2">
+                                                    <input type="radio" value="Балкон с открывающейся боковой створкой"
+                                                           name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_g_2.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Балкон с открывающейся боковой створкой</span>
+                                                </label>
+                                            </div>
+                                        </div> <!-- // .okno-tab-content2-->
+
+                                        <!-- Loggia and Balcony type 3. Secondary-->
+                                        <div class="radio-sp-type okno-tab-content3 tab-secondary-content">
+                                            <h4>Тип открывания</h4>
+                                            <div class="radio-type">
+                                                <label class="invisible-input radio-label-sec radio-type-label activated"
+                                                       okno-otkr="3-1">
+                                                    <input type="radio"
+                                                           value="Балкон с двумя глухими боковыми створками"
+                                                           name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_p_1.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Балкон с двумя глухими боковыми створками</span>
+                                                </label>
+                                                <label class="invisible-input radio-label-sec radio-type-label"
+                                                       okno-otkr="3-2">
+                                                    <input type="radio"
+                                                           value="Балкон с одной открывающейся боковой створкой"
+                                                           name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_p_2.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Балкон с одной открывающейся боковой створкой</span>
+                                                </label>
+                                                <label class="invisible-input radio-label-sec radio-type-label"
+                                                       okno-otkr="3-3">
+                                                    <input type="radio"
+                                                           value="Балкон с двумя открывающимися боковыми створками"
+                                                           name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_p_3.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Балкон с двумя открывающимися боковыми створками</span>
+                                                </label>
+                                            </div>
+                                        </div> <!-- // .okno-tab-content3-->
+
+                                    </div> <!-- // .calc-top-info-->
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="calc-dimensions calc-horizontal">
+                                        <div class="dimensions-item horizontal-item">
+                                            <div>Ширина</div>
+                                            <input type="number" name="width" value="">
+                                        </div>
+                                        <div class="dimensions-item horizontal-item">
+                                            <div>Высота</div>
+                                            <input type="number" name="height" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- // .calc-form-top-->
+
+                        <div class="calc-form-bottom">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="calc-block form-group">
+                                        <h4 class="calc-block-title">Производитель</h4>
+                                        <div class="calc-radio-list calc-radio-twin-list">
+
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Lider"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Lider</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Aluplast Ideal 2000">
+                                                <span class="radio-list-item-label">Aluplast Ideal 2000</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Brokelman 4">
+                                                <span class="radio-list-item-label">Brokelman 4</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Aluplast Ideal 4000">
+                                                <span class="radio-list-item-label">Aluplast Ideal 4000</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Vigrand 3">
+                                                <span class="radio-list-item-label">Vigrand 3</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Rehau E-60">
+                                                <span class="radio-list-item-label">Rehau E-60</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Vigrand 4">
+                                                <span class="radio-list-item-label">Vigrand 4</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Rehau E-70">
+                                                <span class="radio-list-item-label">Rehau E-70</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Vigrand 6">
+                                                <span class="radio-list-item-label">Vigrand 6</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Rehau SYNEGO">
+                                                <span class="radio-list-item-label">Rehau SYNEGO</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Vigrand 7">
+                                                <span class="radio-list-item-label">Vigrand 7</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Rehau GENEO">
+                                                <span class="radio-list-item-label">Rehau GENEO</span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-package calc-block form-group">
+                                        <h4 class="calc-block-title">Стеклопакет</h4>
+                                        <div class="calc-radio-list">
+
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package" value="1-камерный"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">1-камерный</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package" value="1-камерный с энерго">
+                                                <span class="radio-list-item-label">1-камерный с энерго</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package" value="2-камерный">
+                                                <span class="radio-list-item-label">2-камерный</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package" value="2-камерный с энерго">
+                                                <span class="radio-list-item-label">2-камерный с энерго</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package"
+                                                       value="2-камерный мультифункциональный">
+                                                <span class="radio-list-item-label">2-камерный мультифункциональный</span>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-furniture calc-block form-group">
+                                        <h4 class="calc-block-title">Фурнитура</h4>
+                                        <div class="calc-radio-list">
+
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-furniture" value="Winkhaus"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Winkhaus</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-furniture" value="Maco">
+                                                <span class="radio-list-item-label">Maco</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-furniture" value="Roto">
+                                                <span class="radio-list-item-label">Roto</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-furniture" value="Vorne">
+                                                <span class="radio-list-item-label">Vorne</span>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="add-info-toggler">+ Дополнительно</p>
+
+                            <div class="add-info-content row" style="display:none">
+                                <div class="col-sm-3">
+                                    <div class="calc-block">
+                                        <h4 class="calc-block-title">Подоконники</h4>
+                                        <div class="calc-radio-list">
+
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Без подоконника"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Без подоконника</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Plastolit">
+                                                <span class="radio-list-item-label">Plastolit</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Openteck">
+                                                <span class="radio-list-item-label">Openteck</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Danke">
+                                                <span class="radio-list-item-label">Danke</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Werzalit">
+                                                <span class="radio-list-item-label">Werzalit</span>
+                                            </label>
+
+                                        </div>
+
+                                    </div> <!-- // .calc-block-->
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-block">
+                                        <h4 class="calc-block-title">Отливы</h4>
+                                        <div class="calc-radio-list">
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-ebb" value="Без отлива"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Без отлива</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-ebb" value="Оцинкованные">
+                                                <span class="radio-list-item-label">Оцинкованные</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-ebb" value="Белые">
+                                                <span class="radio-list-item-label">Белые</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-ebb" value="Коричневые">
+                                                <span class="radio-list-item-label">Коричневые</span>
+                                            </label>
+                                        </div>
+                                    </div> <!-- // .calc-block-->
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-block">
+                                        <h4 class="calc-block-title">Откосы</h4>
+                                        <div class="calc-radio-list">
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-slope" value="Без откосов"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Без откосов</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-slope" value="Гипсокартонные">
+                                                <span class="radio-list-item-label">Гипсокартонные</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-slope" value="Пластиковые">
+                                                <span class="radio-list-item-label">Пластиковые</span>
+                                            </label>
+                                        </div>
+                                    </div> <!-- // .calc-block-->
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-block">
+                                        <h4 class="calc-block-title">Монтаж</h4>
+                                        <div class="calc-radio-list">
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-montage" value="Без монтажа"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Без монтажа</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-montage" value="Установка">
+                                                <span class="radio-list-item-label">Установка</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-montage" value="Евромонтаж">
+                                                <span class="radio-list-item-label">Евромонтаж</span>
+                                            </label>
+                                        </div>
+                                    </div> <!-- // .calc-block-->
+                                </div>
+                            </div>
+
+                            <h4>Контакты</h4>
+                            <div class="calc-contacts calc-horizontal">
+                                <div class="contacts-item horizontal-item form-group">
+                                    <p>Для более точной оценки стоимости окон оставьте свои контактные данные и мы вам
+                                        перезвоним</p>
+                                </div>
+                                <div class="contacts-item horizontal-item form-group">
+                                    <input type="text" name="name" value="" placeholder="Ваше имя">
+                                </div>
+                                <div class="contacts-item horizontal-item form-group">
+                                    <input type="tel" name="phone" value="" placeholder="Ваш номер телефона">
+                                </div>
+                            </div>
+                            <div class="calc-horizontal form-group">
+                                <button type="submit">Оформить заказ</button>
+                            </div>
+
+                        </div><!-- // .calc-form-bottom-->
+                    </form>
+                </div>
+                <!--Balcony Entrance-->
+                <div class=" entrance tab ">
+                    <form>
+                        <div class="calc-form-top">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="calc-form-img">
+                                        <img id="w3" class="window-image" src="./img/big/balcony-entrance_2-1_.png"
+                                             alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="calc-top-info">
+
+                                        <!-- Balcony Entrance. Primary-->
+                                        <div class="radio-sp-type okno-tab-content">
+                                            <div class="radio-type">
+                                                <label class="invisible-input radio-type-label nav-tab-label activated">
+                                                    <input type="radio" value="Балконный блок с 1 окном" okno-type="1"
+                                                           name="radio-type"
+                                                           checked="checked">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_vih1.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Балконный блок с 1 окном</span>
+                                                </label>
+                                                <label class="invisible-input nav-tab-label radio-type-label">
+                                                    <input type="radio" value="Балконный блок с 2 окнами" okno-type="2"
+                                                           name="radio-type">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_vih2.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Балконный блок с 2 окнами</span>
+                                                </label>
+                                                <label class="invisible-input nav-tab-label radio-type-label">
+                                                    <input type="radio" value="Балконная дверь" okno-type="3"
+                                                           name="radio-type">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_dver.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Балконная дверь</span>
+                                                </label>
+                                            </div>
+                                        </div> <!-- // .okno-tab-content-->
+
+                                        <!-- Balcony Entrance type 1. Secondary-->
+                                        <div class="radio-sp-type okno-tab-content1 tab-secondary-content is-active">
+                                            <h4>Тип открывания</h4>
+                                            <div class="radio-type">
+                                                <label class="invisible-input radio-label-sec radio-type-label activated"
+                                                       okno-otkr="1-1">
+                                                    <input type="radio" value="Балконный блок с одним глухим окном"
+                                                           name="radio-type2"
+                                                           checked="checked">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_vih1_1.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Балконный блок с одним глухим окном</span>
+                                                </label>
+                                            </div>
+                                        </div> <!-- // .okno-tab-content1-->
+
+                                        <!-- Balcony Entrance type 2. Secondary-->
+                                        <div class="radio-sp-type okno-tab-content2 tab-secondary-content">
+                                            <h4>Тип открывания</h4>
+                                            <div class="radio-type">
+                                                <label class="invisible-input radio-label-sec radio-type-label activated"
+                                                       okno-otkr="2-1">
+                                                    <input type="radio" value="Балконный блок с двумя окнами"
+                                                           name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_vih2_1.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Балконный блок с двумя окнами</span>
+                                                </label>
+                                            </div>
+                                        </div> <!-- // .okno-tab-content2-->
+
+                                        <!-- Balcony Entrance type 3. Secondary-->
+                                        <div class="radio-sp-type okno-tab-content3 tab-secondary-content">
+                                            <h4>Тип открывания</h4>
+                                            <div class="radio-type">
+                                                <label class="invisible-input radio-label-sec radio-type-label activated"
+                                                       okno-otkr="3-1">
+                                                    <input type="radio" value="Балконная дверь" name="radio-type2">
+                                                    <span class="radio-img">
+                                                    <img src="img/icons/okno_dver_1.png" alt="">
+                                                </span>
+                                                    <span class="radio-label-text">Балконная дверь</span>
+                                                </label>
+                                            </div>
+                                        </div> <!-- // .okno-tab-content3-->
+
+                                    </div> <!-- // .calc-top-info-->
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="calc-dimensions calc-horizontal">
+                                        <div class="dimensions-item horizontal-item">
+                                            <div>Ширина</div>
+                                            <input type="number" name="width" value="">
+                                        </div>
+                                        <div class="dimensions-item horizontal-item">
+                                            <div>Высота</div>
+                                            <input type="number" name="height" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- // .calc-form-top-->
+
+                        <div class="calc-form-bottom">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="calc-block form-group">
+                                        <h4 class="calc-block-title">Производитель</h4>
+                                        <div class="calc-radio-list calc-radio-twin-list">
+
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Lider"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Lider</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Aluplast Ideal 2000">
+                                                <span class="radio-list-item-label">Aluplast Ideal 2000</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Brokelman 4">
+                                                <span class="radio-list-item-label">Brokelman 4</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Aluplast Ideal 4000">
+                                                <span class="radio-list-item-label">Aluplast Ideal 4000</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Vigrand 3">
+                                                <span class="radio-list-item-label">Vigrand 3</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Rehau E-60">
+                                                <span class="radio-list-item-label">Rehau E-60</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Vigrand 4">
+                                                <span class="radio-list-item-label">Vigrand 4</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Rehau E-70">
+                                                <span class="radio-list-item-label">Rehau E-70</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Vigrand 6">
+                                                <span class="radio-list-item-label">Vigrand 6</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Rehau SYNEGO">
+                                                <span class="radio-list-item-label">Rehau SYNEGO</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Vigrand 7">
+                                                <span class="radio-list-item-label">Vigrand 7</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-producer" value="Rehau GENEO">
+                                                <span class="radio-list-item-label">Rehau GENEO</span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-package calc-block form-group">
+                                        <h4 class="calc-block-title">Стеклопакет</h4>
+                                        <div class="calc-radio-list">
+
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package" value="1-камерный"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">1-камерный</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package" value="1-камерный с энерго">
+                                                <span class="radio-list-item-label">1-камерный с энерго</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package" value="2-камерный">
+                                                <span class="radio-list-item-label">2-камерный</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package" value="2-камерный с энерго">
+                                                <span class="radio-list-item-label">2-камерный с энерго</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-package"
+                                                       value="2-камерный мультифункциональный">
+                                                <span class="radio-list-item-label">2-камерный мультифункциональный</span>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-furniture calc-block form-group">
+                                        <h4 class="calc-block-title">Фурнитура</h4>
+                                        <div class="calc-radio-list">
+
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-furniture" value="Winkhaus"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Winkhaus</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-furniture" value="Maco">
+                                                <span class="radio-list-item-label">Maco</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-furniture" value="Roto">
+                                                <span class="radio-list-item-label">Roto</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-furniture" value="Vorne">
+                                                <span class="radio-list-item-label">Vorne</span>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="add-info-toggler">+ Дополнительно</p>
+
+                            <div class="add-info-content row" style="display:none">
+                                <div class="col-sm-3">
+                                    <div class="calc-block">
+                                        <h4 class="calc-block-title">Подоконники</h4>
+                                        <div class="calc-radio-list">
+
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Без подоконника"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Без подоконника</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Plastolit">
+                                                <span class="radio-list-item-label">Plastolit</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Openteck">
+                                                <span class="radio-list-item-label">Openteck</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Danke">
+                                                <span class="radio-list-item-label">Danke</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-sill" value="Werzalit">
+                                                <span class="radio-list-item-label">Werzalit</span>
+                                            </label>
+
+                                        </div>
+
+                                    </div> <!-- // .calc-block-->
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-block">
+                                        <h4 class="calc-block-title">Отливы</h4>
+                                        <div class="calc-radio-list">
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-ebb" value="Без отлива"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Без отлива</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-ebb" value="Оцинкованные">
+                                                <span class="radio-list-item-label">Оцинкованные</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-ebb" value="Белые">
+                                                <span class="radio-list-item-label">Белые</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-ebb" value="Коричневые">
+                                                <span class="radio-list-item-label">Коричневые</span>
+                                            </label>
+                                        </div>
+                                    </div> <!-- // .calc-block-->
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-block">
+                                        <h4 class="calc-block-title">Откосы</h4>
+                                        <div class="calc-radio-list">
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-slope" value="Без откосов"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Без откосов</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-slope" value="Гипсокартонные">
+                                                <span class="radio-list-item-label">Гипсокартонные</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-slope" value="Пластиковые">
+                                                <span class="radio-list-item-label">Пластиковые</span>
+                                            </label>
+                                        </div>
+                                    </div> <!-- // .calc-block-->
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="calc-block">
+                                        <h4 class="calc-block-title">Монтаж</h4>
+                                        <div class="calc-radio-list">
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-montage" value="Без монтажа"
+                                                       checked="checked">
+                                                <span class="radio-list-item-label">Без монтажа</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-montage" value="Установка">
+                                                <span class="radio-list-item-label">Установка</span>
+                                            </label>
+                                            <label class="radio-list-item">
+                                                <input type="radio" name="window-montage" value="Евромонтаж">
+                                                <span class="radio-list-item-label">Евромонтаж</span>
+                                            </label>
+                                        </div>
+                                    </div> <!-- // .calc-block-->
+                                </div>
+                            </div>
+
+                            <h4>Контакты</h4>
+                            <div class="calc-contacts calc-horizontal">
+                                <div class="contacts-item horizontal-item form-group">
+                                    <p>Для более точной оценки стоимости окон оставьте свои контактные данные и мы вам
+                                        перезвоним</p>
+                                </div>
+                                <div class="contacts-item horizontal-item form-group">
+                                    <input type="text" name="name" value="" placeholder="Ваше имя">
+                                </div>
+                                <div class="contacts-item horizontal-item form-group">
+                                    <input type="tel" name="phone" value="" placeholder="Ваш номер телефона">
+                                </div>
+                            </div>
+                            <div class="calc-horizontal form-group">
+                                <button type="submit">Оформить заказ</button>
+                            </div>
+
+                        </div><!-- // .calc-form-bottom-->
+                    </form>
+                </div>
+            </div>
+
+        </div> <!-- // .calculator-->
+
+    </div> <!-- // .conteiner--></div>
+
+</body>
+
+<script src="main.js"></script>
+</html>
